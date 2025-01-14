@@ -1,0 +1,3 @@
+<template>
+  Solutii Iluminare
+</template>

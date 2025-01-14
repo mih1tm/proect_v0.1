@@ -15,23 +15,15 @@ export default {
 
 <template>
   <div>
-    <v-btn
-      :ripple="{ class: 'text-blue' }"
-      class="button"
-      variant="text"
-      :to="to"
-      active-class="nothing"
-      >{{ title }}</v-btn
-    >
+    <v-btn class="button" variant="text" :ripple="{ color: 'red' }" active-class>
+      {{ title }}
+    </v-btn>
+    <slot></slot>
   </div>
 </template>
 
 <style scoped>
-.router-link-exact-active {
-  color: red;
-}
 .button {
-
   display: flex;
   margin: 10px;
   padding: 10px;

@@ -1,6 +1,14 @@
 <script setup>
 import button_toolbar from './buttons/button_toolbar.vue'
-import { RouterLink } from 'vue-router'
+import Button_toolbar_menu from './buttons/button_toolbar_menu.vue'
+</script>
+
+<script>
+export default {
+  components: {
+    button_toolbar,
+  },
+}
 </script>
 
 <template>
@@ -22,13 +30,42 @@ import { RouterLink } from 'vue-router'
       </div>
     </div>
     <div class="buttons_toolbar">
-      <button_toolbar title="abracadabra">
-        <RouterLink to="/aboutapp" />
+      <Button_toolbar_menu title="abracadabra"
+        ><v-menu activator="parent">
+          <v-list>
+            <v-list-item link>
+              <v-list-item-title>Catalog Materiale</v-list-item-title>
+              <v-menu location="end" activator="parent" open-on-click>
+                <v-list>
+                  <v-list-item link>
+                    <v-list-item-title>Tipuri de materiale</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item link>
+                    <v-list-item-title>Culori</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item link>
+                    <v-list-item-title>Idei Design</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </v-list-item>
+            <v-list-item link>
+              <v-list-item-title>Sunt un titlu</v-list-item-title>
+            </v-list-item>
+            <v-list-item link>
+              <v-list-item-title>titlu3</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>titlu4</v-list-item-title>
+            </v-list-item>
+            <v-btn> sdaad </v-btn>
+          </v-list>
+        </v-menu></Button_toolbar_menu
+      >
+      <button_toolbar to="/aboutapp" title="test" />
+      <button_toolbar class="test" color="blue" title="contactsapp" to="/contactsapp">
       </button_toolbar>
-      <button_toolbar title="blabla">
-        <RouterLink to="/contactsapp" />
-      </button_toolbar>
-      <button_toolbar title="cece" />
+      <button_toolbar title="aboutapp" to="/aboutapp" />
       <button_toolbar title="dede" />
       <button_toolbar title="ffff" />
       <button_toolbar title="hhhyy" />
@@ -37,6 +74,9 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped>
+.test {
+  background-color: transparent;
+}
 .header {
   display: flex;
   flex-direction: column;

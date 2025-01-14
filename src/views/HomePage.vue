@@ -5,7 +5,12 @@ import { RouterView } from 'vue-router'
 
 <template>
   <main>
-    <MainBar />
+    <div>
+      <MainBar />
+    </div>
+    <div>
+      <RouterView />
+    </div>
+    <div>sunt jos in pagina</div>
   </main>
-  <RouterView />
 </template>
