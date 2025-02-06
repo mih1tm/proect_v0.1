@@ -16,11 +16,11 @@ export default {
 <template>
   <div>
     <v-btn
-      :ripple="{ class: 'text-blue' }"
+      :ripple="{ class: 'text-red' }"
       class="button"
       variant="text"
       :to="to"
-      active-class="nothing"
+      active-class
       >{{ title }}</v-btn
     >
   </div>

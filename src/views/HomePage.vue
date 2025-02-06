@@ -1,6 +1,6 @@
 <script setup>
-import MainBar from '../components/MainBar.vue'
-import { RouterView } from 'vue-router'
+import { RouterView} from 'vue-router'
+import MainBar from '../components/MainBar.vue' /* PartiallyEnd: #3632/scriptSetup.vue */
 </script>
 
 <template>
@@ -11,6 +11,12 @@ import { RouterView } from 'vue-router'
     <div>
       <RouterView />
     </div>
-    <div>sunt jos in pagina</div>
+    <div class="about">sunt jos in pagina</div>
   </main>
 </template>
+
+<style scoped>
+.about {
+  bottom: 0px;
+}
+</style>

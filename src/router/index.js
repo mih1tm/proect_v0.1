@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutApp from '@/views/AboutApp.vue'
 import ContactsApp from '@/views/ContactsApp.vue'
 import HomePage from '@/views/HomePage.vue'
+import MaterialePage from '@/views/pages/catalog/materiale/MaterialePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,11 @@ const router = createRouter({
       path: '/contactsapp',
       name: 'contactsapp',
       component: ContactsApp,
+    },
+    {
+      path: '/MaterialePage',
+      name: 'MaterialePage',
+      component: MaterialePage,
     },
   ],
 })

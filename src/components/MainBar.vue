@@ -1,12 +1,15 @@
 <script setup>
 import button_toolbar from './buttons/button_toolbar.vue'
 import Button_toolbar_menu from './buttons/button_toolbar_menu.vue'
+import menu_one from './menus/menu_PanouriDecorative.vue'
+import menu_two from './menus/menu_IdeiDesign.vue'
 </script>
 
 <script>
 export default {
   components: {
     button_toolbar,
+    menu_one,
   },
 }
 </script>
@@ -15,12 +18,14 @@ export default {
   <header id="header" class="header">
     <div class="notification_bar">!!! text notification_bar !!!</div>
     <div class="main_toolbar">
-      <div class="app_logo_area"><img src="@/assets/logo_brand1.jpeg" /></div>
+      <div class="app_logo_area">
+        <button><img src="@/assets/logo_brand1.jpeg" /></button>
+      </div>
       <div class="search_area">
         <v-text-field
           class="search_input"
           clearable
-          label="Cauta"
+          placeholder="Cauta"
           append-inner-icon="mdi-magnify"
           variant="solo"
         ></v-text-field>
@@ -30,45 +35,14 @@ export default {
       </div>
     </div>
     <div class="buttons_toolbar">
-      <Button_toolbar_menu title="abracadabra"
-        ><v-menu activator="parent">
-          <v-list>
-            <v-list-item link>
-              <v-list-item-title>Catalog Materiale</v-list-item-title>
-              <v-menu location="end" activator="parent" open-on-click>
-                <v-list>
-                  <v-list-item link>
-                    <v-list-item-title>Tipuri de materiale</v-list-item-title>
-                  </v-list-item>
-                  <v-list-item link>
-                    <v-list-item-title>Culori</v-list-item-title>
-                  </v-list-item>
-                  <v-list-item link>
-                    <v-list-item-title>Idei Design</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-title>Sunt un titlu</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-title>titlu3</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>titlu4</v-list-item-title>
-            </v-list-item>
-            <v-btn> sdaad </v-btn>
-          </v-list>
-        </v-menu></Button_toolbar_menu
-      >
-      <button_toolbar to="/aboutapp" title="test" />
+      <Button_toolbar_menu title="Catalog Placi Decorative"><menu_one /></Button_toolbar_menu>
+
+      <Button_toolbar_menu title="Idei Design"><menu_two /></Button_toolbar_menu>
       <button_toolbar class="test" color="blue" title="contactsapp" to="/contactsapp">
       </button_toolbar>
       <button_toolbar title="aboutapp" to="/aboutapp" />
       <button_toolbar title="dede" />
       <button_toolbar title="ffff" />
-      <button_toolbar title="hhhyy" />
     </div>
   </header>
 </template>
