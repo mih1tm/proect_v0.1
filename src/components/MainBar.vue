@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <header id="header" class="header">
+  <div id="header" class="header">
     <div class="notification_bar">!!! text notification_bar !!!</div>
     <div class="main_toolbar">
       <div class="app_logo_area">
@@ -35,16 +35,18 @@ export default {
       </div>
     </div>
     <div class="buttons_toolbar">
-      <Button_toolbar_menu title="Catalog Placi Decorative"><menu_one /></Button_toolbar_menu>
+      <Button_toolbar_menu title="Catalog Placi Decorative" open-on-hover
+        ><menu_one
+      /></Button_toolbar_menu>
 
       <Button_toolbar_menu title="Idei Design"><menu_two /></Button_toolbar_menu>
       <button_toolbar class="test" color="blue" title="contactsapp" to="/contactsapp">
       </button_toolbar>
       <button_toolbar title="aboutapp" to="/aboutapp" />
       <button_toolbar title="dede" />
-      <button_toolbar title="ffff" />
+      <button_toolbar title="Configurator" to="/ConfiguratorMain" />
     </div>
-  </header>
+  </div>
 </template>
 
 <style scoped>

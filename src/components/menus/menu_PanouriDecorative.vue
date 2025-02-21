@@ -3,7 +3,7 @@ import baseMenu from './baseMenu.vue'
 const menuData = [
   {
     title: 'Panouri Decorative',
-    to: '/MaterialePage',
+    to: '/CatalogMaterialePage',
     childrenItems: [
       {
         title: 'PAL',

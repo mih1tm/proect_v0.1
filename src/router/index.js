@@ -3,7 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutApp from '@/views/AboutApp.vue'
 import ContactsApp from '@/views/ContactsApp.vue'
 import HomePage from '@/views/HomePage.vue'
-import MaterialePage from '@/views/pages/catalog/materiale/MaterialePage.vue'
+
+import CatalogMaterialePage from '@/views/pages/catalog/CatalogMaterialePage.vue'
+import ConfiguratorMain from '@/views/pages/ConfiguratorMain.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,10 +34,15 @@ const router = createRouter({
       component: ContactsApp,
     },
     {
-      path: '/MaterialePage',
-      name: 'MaterialePage',
-      component: MaterialePage,
+      path: '/CatalogMaterialePage',
+      name: 'CatalogMaterialePage',
+      component: CatalogMaterialePage,
     },
+    {
+      path: '/ConfiguratorMain',
+      name: 'ConfiguratorMain',
+      component: ConfiguratorMain,
+    }
   ],
 })
 

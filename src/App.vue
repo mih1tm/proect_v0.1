@@ -3,8 +3,8 @@
 import HomePage from './views/HomePage.vue'
 </script>
 
-<template>
-  <header>
-    <HomePage />
-  </header>
+<template class="test">
+  <HomePage />
 </template>
+
+<style scoped></style>

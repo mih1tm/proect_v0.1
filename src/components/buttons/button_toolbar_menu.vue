@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div>
-    <v-btn class="button" variant="text" :ripple="{ color: 'red' }" active-class>
+    <v-btn class="button" variant="text" :ripple="{ color: 'red' }" :to="to" active-class>
       {{ title }}
     </v-btn>
     <slot></slot>
@@ -23,6 +23,9 @@ export default {
 </template>
 
 <style scoped>
+a:hover {
+  background-color: hsla(0, 0, 0, 0);
+}
 .button {
   display: flex;
   margin: 10px;
